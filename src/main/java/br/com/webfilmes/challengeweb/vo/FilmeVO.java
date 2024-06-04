@@ -1,16 +1,12 @@
 package br.com.webfilmes.challengeweb.vo;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import org.springframework.hateoas.RepresentationModel;
 
 
 @Data
-public class FilmeVO {
-
-    @JsonProperty("Title")
+public class FilmeVO extends RepresentationModel {
+    private Long id;
     private String title;
-
-    @JsonProperty("Year")
     private String year;
-
 }
